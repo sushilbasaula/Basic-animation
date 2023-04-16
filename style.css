@@ -1,0 +1,74 @@
+.container {
+  background: #b20238;
+  width: 80%;
+  margin: auto;
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.parent {
+  background: pink;
+  width: 300px;
+  height: 300px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s infinite reverse;
+}
+
+.ball {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(white, green 70%);
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+
+  animation: circle 2s infinite;
+}
+
+h2 {
+  animation: spin 2s infinite reverse;
+}
+
+@keyframes circle {
+  0% {
+    left: 20px;
+    top: 20px;
+  }
+
+  25% {
+    left: 20px;
+    top: 65vh;
+  }
+
+  50% {
+    left: 80%;
+    top: 65vh;
+  }
+
+  75% {
+    left: 80%;
+    top: 20px;
+  }
+
+  100% {
+    left: 20px;
+    top: 20px;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
